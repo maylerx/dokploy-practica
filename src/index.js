@@ -38,20 +38,3 @@ app.listen(port, '0.0.0.0', () => {
     console.log(`Servidor corriendo en puerto ${port}`);
     console.log(`Plataforma: Dokploy PaaS`);
 });
-EOF
-
-# Crear archivo .env
-cat > .env << 'EOF'
-NODE_ENV=production
-PORT=3000
-EOF
-
-# Crear .dockerignore
-cat > .dockerignore << 'EOF'
-node_modules
-npm-debug.log
-.git
-.gitignore
-.env
-README.md
-*.md
